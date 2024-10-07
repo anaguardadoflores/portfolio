@@ -1,112 +1,115 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
+import GitHub from "./icons/GitHub.astro";
+import Javascript from "./icons/Javascript.astro";
+import React from "./icons/React.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-[#F7DF1E] text-white",
-    icon: Tailwind,
+    class: "bg-[#f4b81f] text-white",
+    icon: Javascript,
   },
   REACT: {
     name: "React",
     class: "bg-[#764ABC] text-white",
-    icon: NextJS,
+    icon: React,
   },
-}
+};
 const PROJECTS = [
   {
     title: "ChatGPT Clone",
     description:
       "En este proyecto, desarrollaré una versión personalizada de ChatGPT utilizando React JS y la API de OpenAI, creando un clon que funcionará de manera similar a la aplicación o el sitio web oficial, pero sin requerir registro. Los usuarios podrán acceder directamente a la aplicación web para realizar consultas sin necesidad de crear una cuenta, y gracias a la integración de la API de OpenAI, el clon responderá de manera eficiente y precisa a todas las preguntas  ",
-    link: "https://github.com/anaguardadoflores",
-    github: "https://github.com/anaguardadoflores",
-    image: "https://i.pinimg.com/564x/84/1b/4c/841b4c132c6f22e7209a9c335f8404d7.jpg",
+    link: "",
+    github: "",
+    image: "/public/chatgptclone.png",
     tags: [TAGS.JAVASCRIPT, TAGS.REACT],
   },
   {
     title: "Pinterest Clone",
     description:
       " En este proyecto, creé un clon visual de Pinterest usando React. Añadí una función de scroll infinito que permite cargar más imágenes a medida que el usuario se desplaza hacia abajo. Para las imágenes, obtuve contenido de la API de Unsplash. Además, implementé características como un buscador y la adaptación para dispositivos móviles. También dejo enlaces al código en GitHub y a la aplicación en línea para que otros puedan verlo.  ",
-    link: "https://github.com/anaguardadoflores",
-    github: "https://github.com/anaguardadoflores",
-    image: "https://i.pinimg.com/564x/16/01/48/1601489869cdc16e08f32bccb9a4017d.jpg",
+    link: "",
+    github: "",
+    image: "/public/pinterest.png",
     tags: [TAGS.JAVASCRIPT, TAGS.REACT],
   },
-    {
+  {
     title: "Book Search Website",
     description:
       "He desarrollado un sitio web de búsqueda de libros utilizando la API de búsqueda de Open Library y React JS. Este proyecto permite a los usuarios buscar y explorar una amplia variedad de libros mediante una interfaz intuitiva y dinámica. Además, integré una presentación visual atractiva, utilizando componentes reutilizables y un diseño responsivo para asegurar la accesibilidad en diferentes dispositivos.   ",
-    link: "https://github.com/anaguardadoflores",
-    github: "https://github.com/anaguardadoflores",
-    image: "https://i.pinimg.com/564x/53/bb/c1/53bbc126e62f4ea665769be06bcb7126.jpg",
+    link: "",
+    github: "",
+    image: "/public/book.png",
     tags: [TAGS.JAVASCRIPT, TAGS.REACT],
   },
-    {
+  {
     title: "Dashboard de Administración",
     description:
       "Este proyecto proporciona una interfaz de usuario intuitiva y funcional, que permite a los administradores gestionar datos de manera eficiente. Implementé diversas secciones, como gráficos, tablas y formularios, para ofrecer una visión clara y organizada de la información. El diseño es totalmente responsivo, lo que garantiza una experiencia de usuario óptima en dispositivos móviles y de escritorio.   ",
-    link: "https://github.com/anaguardadoflores",
-    github: "https://github.com/anaguardadoflores",
-    image: "https://i.pinimg.com/564x/25/15/95/2515953f88de2e1fbec36f8ea0a46788.jpg",
-     tags: [TAGS.JAVASCRIPT, TAGS.REACT],
-  }
-]
+    link: "",
+    github: "",
+    image: "/public/dash.png",
+    tags: [TAGS.JAVASCRIPT, TAGS.REACT],
+  },
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="imagen proyecto" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="imagen proyecto"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2.5 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-
